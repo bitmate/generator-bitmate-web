@@ -8,7 +8,8 @@
   "dependencies": {
     "bitmate-generator": "file:../bitmate-generator",
     "generator-bitmate-angular1": "file:../generator-bitmate-angular1",
-    "generator-bitmate-express": "file:../generator-bitmate-express"
+    "generator-bitmate-express": "file:../generator-bitmate-express",
+    "generator-bitmate-grunt": "file:../generator-bitmate-grunt"
   },
   "devDependencies": {
     "ava": "^0.16.0",
