@@ -14,28 +14,22 @@ test.before(() => {
     process.chdir('../../');
 });
 
-test('Call this.serverPrompts', () => {
-    context.serverPrompts = () => {};
-    const server = chai.spy.on(context, 'serverPrompts');
-    TestUtils.call(context, 'prompting.server');
-    expect(server).to.have.been.called.once();
+test('Call this.bitmatePrompts', () => {
+    context.bitmatePrompts = () => {};
+    const prompts = chai.spy.on(context, 'bitmatePrompts');
+    TestUtils.call(context, 'prompting');
+    expect(prompts).to.have.been.called.once();
 });
 
-test('Call this.clientPrompts', () => {
-    context.clientPrompts = () => {};
-    const client = chai.spy.on(context, 'clientPrompts');
-    TestUtils.call(context, 'prompting.client');
-    expect(client).to.have.been.called.once();
-});
-
-test('composing(): Call this.composeWith, should generate server and client', () => {
+test('composing(): Call this.composeWith, should generate server, client and runner', () => {
     context.composeWith = () => {};
     const spy = chai.spy.on(context, 'composeWith');
     TestUtils.call(context, 'composing', {
         client: 'angular1',
-        server: 'express'
+        server: 'express',
+        runner: 'grunt'
     });
-    expect(spy).to.have.been.called.twice;
+    expect(spy).to.have.been.called.exactly(3);
 });
 
 test('composing(): should only generate server if no client framework', () => {
@@ -43,8 +37,8 @@ test('composing(): should only generate server if no client framework', () => {
     const spy = chai.spy.on(context, 'composeWith');
     TestUtils.call(context, 'composing', {
         client: 'none',
-        server: 'express'
+        server: 'express',
+        runner: 'grunt'
     });
-    expect(spy).to.have.been.called.once;
-    expect(spy).to.have.been.called.with('bitmate-express');
+    expect(spy).to.have.been.called.twice;
 });

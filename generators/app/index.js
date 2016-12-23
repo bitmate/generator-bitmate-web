@@ -4,13 +4,8 @@ module.exports = bitmate.Base.extend({
   initializing() {
 
   },
-  prompting: {
-    server() {
-      return this.serverPrompts();
-    },
-    client() {
-      return this.clientPrompts();
-    }
+  prompting() {
+    return this.bitmatePrompts();
   },
 
   composing() {
@@ -18,6 +13,7 @@ module.exports = bitmate.Base.extend({
       options: {
         framework: this.props.server,
         client: this.props.client,
+        runner: this.props.runner,
         skipInstall: this.props.skipInstall,
         skipCache: this.props.skipCache
       }
@@ -29,6 +25,10 @@ module.exports = bitmate.Base.extend({
       this.composeWith(`bitmate-${this.props.client}`, {
         options: {
           framework: this.props.client,
+          css: this.props.css,
+          html: this.props.html,
+          modules: this.props.modules,
+          runner: this.props.runner,
           skipInstall: this.props.skipInstall,
           skipCache: this.props.skipCache
         }
@@ -37,8 +37,14 @@ module.exports = bitmate.Base.extend({
       });
     }
 
-    this.composeWith(`bitmate-grunt`, {}, {
-      local: require.resolve(`generator-bitmate-grunt/generators/app`)
+    this.composeWith(`bitmate-${this.props.runner}`, {
+      options: {
+        css: this.props.css,
+        skipInstall: this.props.skipInstall,
+        skipCache: this.props.skipCache
+      }
+    }, {
+      local: require.resolve(`generator-bitmate-${this.props.runner}/generators/app`)
     });
   }
 });
