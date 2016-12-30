@@ -1,9 +1,6 @@
 const bitmate = require('bitmate-generator');
 
 module.exports = bitmate.Base.extend({
-  initializing() {
-
-  },
   prompting() {
     return this.bitmatePrompts();
   },
@@ -21,7 +18,7 @@ module.exports = bitmate.Base.extend({
       local: require.resolve(`generator-bitmate-${this.props.server}/generators/app`)
     });
 
-    if (this.props.client !== 'none'){
+    if (this.props.client !== 'none') {
       this.composeWith(`bitmate-${this.props.client}`, {
         options: {
           framework: this.props.client,
@@ -39,7 +36,10 @@ module.exports = bitmate.Base.extend({
 
     this.composeWith(`bitmate-${this.props.runner}`, {
       options: {
+        client: this.props.client,
+        modules: this.props.modules,
         css: this.props.css,
+        js: this.props.js,
         skipInstall: this.props.skipInstall,
         skipCache: this.props.skipCache
       }

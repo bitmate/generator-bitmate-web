@@ -4,21 +4,30 @@
   "description": "BitMate generator to scaffold a web application",
   "main": "index.js",
   "author": "BitMate",
-  "license": "ISC",
+  "repository": "oligibson/generator-bitmate-web",
+  "license": "UNLICENSED",
+  "private": true,
   "dependencies": {
     "bitmate-generator": "file:../bitmate-generator",
     "generator-bitmate-angular1": "file:../generator-bitmate-angular1",
     "generator-bitmate-express": "file:../generator-bitmate-express",
-    "generator-bitmate-grunt": "file:../generator-bitmate-grunt"
+    "generator-bitmate-grunt": "file:../generator-bitmate-grunt",
+    "generator-bitmate-gulp": "file:../generator-bitmate-gulp"
   },
   "devDependencies": {
     "ava": "^0.16.0",
+    "babel-eslint": "^6.0.2",
     "chai": "^3.5.0",
     "chai-spies": "^0.7.1",
-    "cross-spawn": "^5.0.0",
+    "cross-spawn": "^4.0.0",
+    "eslint": "^3.2.2",
+    "eslint-config-xo-space": "^0.12.0",
+    "eslint-plugin-babel": "^3.2.0",
     "gulp": "gulpjs/gulp#4.0",
-    "gulp-nsp": "^2.3.0",
-    "nyc": "^8.4.0"
+    "gulp-eslint": "^2.0.0",
+    "gulp-exclude-gitignore": "^1.0.0",
+    "gulp-nsp": "^2.4.0",
+    "nyc": "^6.6.1"
   },
   "ava": {
     "files": [
@@ -36,5 +45,8 @@
   "scripts": {
     "test": "gulp test",
     "prepublish": "gulp prepublish"
+  },
+  "eslintConfig": {
+    "extends": "xo-space/esnext"
   }
 }
