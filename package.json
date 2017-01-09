@@ -10,6 +10,7 @@
   "dependencies": {
     "bitmate-generator": "file:../bitmate-generator",
     "generator-bitmate-angular1": "file:../generator-bitmate-angular1",
+    "generator-bitmate-react": "file:../generator-bitmate-react",
     "generator-bitmate-express": "file:../generator-bitmate-express",
     "generator-bitmate-grunt": "file:../generator-bitmate-grunt",
     "generator-bitmate-gulp": "file:../generator-bitmate-gulp"
