@@ -45,3 +45,15 @@ test('composing(): should only generate server if no client framework', () => {
   });
   expect(spy).to.have.been.called.twice();
 });
+
+test('composing(): should only generate client if no server framework', () => {
+  context.composeWith = () => {
+  };
+  const spy = chai.spy.on(context, 'composeWith');
+  TestUtils.call(context, 'composing', {
+    client: 'angular1',
+    server: 'none',
+    runner: 'grunt'
+  });
+  expect(spy).to.have.been.called.twice();
+});
