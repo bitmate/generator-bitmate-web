@@ -11,7 +11,6 @@
     "generator-bitmate-angular1": "^1.0.0",
     "generator-bitmate-react": "^1.0.0",
     "generator-bitmate-express": "^1.0.0",
-    "generator-bitmate-grunt": "^1.0.0",
     "generator-bitmate-gulp": "^1.0.0",
     "generator-bitmate-readme": "^1.0.0"
   },
