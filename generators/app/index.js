@@ -49,5 +49,18 @@ module.exports = bitmate.Base.extend({
     }, {
       local: require.resolve(`generator-bitmate-${this.props.runner}/generators/app`)
     });
+
+    this.composeWith(`bitmate-readme`, {
+      options: {
+        client: this.props.client,
+        modules: this.props.modules,
+        css: this.props.css,
+        js: this.props.js,
+        skipInstall: this.props.skipInstall,
+        skipCache: this.props.skipCache
+      }
+    }, {
+      local: require.resolve(`generator-bitmate-readme/generators/app`)
+    });
   }
 });

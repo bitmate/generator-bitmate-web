@@ -13,7 +13,8 @@
     "generator-bitmate-react": "file:../generator-bitmate-react",
     "generator-bitmate-express": "file:../generator-bitmate-express",
     "generator-bitmate-grunt": "file:../generator-bitmate-grunt",
-    "generator-bitmate-gulp": "file:../generator-bitmate-gulp"
+    "generator-bitmate-gulp": "file:../generator-bitmate-gulp",
+    "generator-bitmate-readme": "file:../generator-bitmate-readme"
   },
   "devDependencies": {
     "ava": "^0.16.0",

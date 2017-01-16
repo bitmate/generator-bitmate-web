@@ -22,7 +22,7 @@ test('Call this.bitmatePrompts', () => {
   expect(prompts).to.have.been.called.once();
 });
 
-test('composing(): Call this.composeWith, should generate server, client and runner', () => {
+test('composing(): Call this.composeWith, should generate server, client, runner and readme', () => {
   context.composeWith = () => {
   };
   const spy = chai.spy.on(context, 'composeWith');
@@ -31,7 +31,7 @@ test('composing(): Call this.composeWith, should generate server, client and run
     server: 'express',
     runner: 'grunt'
   });
-  expect(spy).to.have.been.called.exactly(3);
+  expect(spy).to.have.been.called.exactly(4);
 });
 
 test('composing(): should only generate server if no client framework', () => {
@@ -43,7 +43,7 @@ test('composing(): should only generate server if no client framework', () => {
     server: 'express',
     runner: 'grunt'
   });
-  expect(spy).to.have.been.called.twice();
+  expect(spy).to.have.been.called.exactly(3);
 });
 
 test('composing(): should only generate client if no server framework', () => {
@@ -55,5 +55,5 @@ test('composing(): should only generate client if no server framework', () => {
     server: 'none',
     runner: 'grunt'
   });
-  expect(spy).to.have.been.called.twice();
+  expect(spy).to.have.been.called.exactly(3);
 });
