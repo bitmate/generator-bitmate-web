@@ -6,15 +6,14 @@
   "author": "BitMate",
   "repository": "oligibson/generator-bitmate-web",
   "license": "UNLICENSED",
-  "private": true,
   "dependencies": {
-    "bitmate-generator": "file:../bitmate-generator",
-    "generator-bitmate-angular1": "file:../generator-bitmate-angular1",
-    "generator-bitmate-react": "file:../generator-bitmate-react",
-    "generator-bitmate-express": "file:../generator-bitmate-express",
-    "generator-bitmate-grunt": "file:../generator-bitmate-grunt",
-    "generator-bitmate-gulp": "file:../generator-bitmate-gulp",
-    "generator-bitmate-readme": "file:../generator-bitmate-readme"
+    "bitmate-generator": "^1.0.0",
+    "generator-bitmate-angular1": "^1.0.0",
+    "generator-bitmate-react": "^1.0.0",
+    "generator-bitmate-express": "^1.0.0",
+    "generator-bitmate-grunt": "^1.0.0",
+    "generator-bitmate-gulp": "^1.0.0",
+    "generator-bitmate-readme": "^1.0.0"
   },
   "devDependencies": {
     "ava": "^0.16.0",
@@ -50,5 +49,8 @@
   },
   "eslintConfig": {
     "extends": "xo-space/esnext"
+  },
+  "publishConfig": {
+    "registry": "http://sinopia.bitmate.io/"
   }
 }
