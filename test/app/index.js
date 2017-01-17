@@ -29,7 +29,7 @@ test('composing(): Call this.composeWith, should generate server, client, runner
   TestUtils.call(context, 'composing', {
     client: 'angular1',
     server: 'express',
-    runner: 'grunt'
+    runner: 'gulp'
   });
   expect(spy).to.have.been.called.exactly(4);
 });
@@ -41,7 +41,7 @@ test('composing(): should only generate server if no client framework', () => {
   TestUtils.call(context, 'composing', {
     client: 'none',
     server: 'express',
-    runner: 'grunt'
+    runner: 'gulp'
   });
   expect(spy).to.have.been.called.exactly(3);
 });
@@ -53,7 +53,7 @@ test('composing(): should only generate client if no server framework', () => {
   TestUtils.call(context, 'composing', {
     client: 'angular1',
     server: 'none',
-    runner: 'grunt'
+    runner: 'gulp'
   });
   expect(spy).to.have.been.called.exactly(3);
 });
