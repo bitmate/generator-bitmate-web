@@ -1,18 +1,18 @@
 {
   "name": "generator-bitmate-web",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "BitMate generator to scaffold a web application",
   "main": "index.js",
   "author": "BitMate",
   "repository": "oligibson/generator-bitmate-web",
   "license": "UNLICENSED",
   "dependencies": {
-    "bitmate-generator": "^1.0.0",
-    "generator-bitmate-angular1": "^1.0.0",
-    "generator-bitmate-react": "^1.0.0",
-    "generator-bitmate-express": "^1.0.0",
-    "generator-bitmate-gulp": "^1.0.0",
-    "generator-bitmate-readme": "^1.0.0"
+    "bitmate-generator": "^1.0.1",
+    "generator-bitmate-angular1": "^1.0.1",
+    "generator-bitmate-react": "^1.0.1",
+    "generator-bitmate-express": "^1.0.1",
+    "generator-bitmate-gulp": "^1.0.1",
+    "generator-bitmate-readme": "^1.0.1"
   },
   "devDependencies": {
     "ava": "^0.16.0",
