@@ -9,6 +9,7 @@
   "dependencies": {
     "bitmate-generator": "^1.0.2",
     "generator-bitmate-angular1": "^1.0.2",
+    "generator-bitmate-angular2": "../generator-bitmate-angular2",
     "generator-bitmate-react": "^1.0.2",
     "generator-bitmate-express": "^1.0.2",
     "generator-bitmate-gulp": "^1.0.2",
