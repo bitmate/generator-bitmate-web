@@ -1,4 +1,4 @@
-const bitmate = require('bitmate-generator');
+const bitmate = require('@oligibson/bitmate-generator');
 
 module.exports = bitmate.Base.extend({
   prompting() {
@@ -16,7 +16,7 @@ module.exports = bitmate.Base.extend({
           skipCache: this.props.skipCache
         }
       }, {
-        local: require.resolve(`generator-bitmate-${this.props.server}/generators/app`)
+        local: require.resolve(`@oligibson/generator-bitmate-${this.props.server}/generators/app`)
       });
     }
 
@@ -33,7 +33,7 @@ module.exports = bitmate.Base.extend({
           skipCache: this.props.skipCache
         }
       }, {
-        local: require.resolve(`generator-bitmate-${this.props.client}/generators/app`)
+        local: require.resolve(`@oligibson/generator-bitmate-${this.props.client}/generators/app`)
       });
     }
 
@@ -47,7 +47,7 @@ module.exports = bitmate.Base.extend({
         skipCache: this.props.skipCache
       }
     }, {
-      local: require.resolve(`generator-bitmate-${this.props.runner}/generators/app`)
+      local: require.resolve(`@oligibson/generator-bitmate-${this.props.runner}/generators/app`)
     });
 
     this.composeWith(`bitmate-readme`, {
@@ -60,7 +60,7 @@ module.exports = bitmate.Base.extend({
         skipCache: this.props.skipCache
       }
     }, {
-      local: require.resolve(`generator-bitmate-readme/generators/app`)
+      local: require.resolve(`@oligibson/generator-bitmate-readme/generators/app`)
     });
   }
 });
