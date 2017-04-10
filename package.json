@@ -1,6 +1,6 @@
 {
   "name": "@oligibson/generator-bitmate-web",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "BitMate generator to scaffold a web application",
   "homepage": "https://bitmate.io/",
   "main": "index.js",
@@ -8,13 +8,13 @@
   "repository": "oligibson/generator-bitmate-web",
   "license": "UNLICENSED",
   "dependencies": {
-    "@oligibson/bitmate-generator": "^1.0.4",
-    "@oligibson/generator-bitmate-angular1": "^1.0.4",
-    "@oligibson/generator-bitmate-angular2": "^1.0.4",
-    "@oligibson/generator-bitmate-react": "^1.0.4",
-    "@oligibson/generator-bitmate-express": "^1.0.4",
-    "@oligibson/generator-bitmate-gulp": "^1.0.4",
-    "@oligibson/generator-bitmate-readme": "^1.0.4"
+    "@oligibson/bitmate-generator": "^1.0.5",
+    "@oligibson/generator-bitmate-angular1": "^1.0.5",
+    "@oligibson/generator-bitmate-angular2": "^1.0.5",
+    "@oligibson/generator-bitmate-react": "^1.0.5",
+    "@oligibson/generator-bitmate-express": "^1.0.5",
+    "@oligibson/generator-bitmate-gulp": "^1.0.5",
+    "@oligibson/generator-bitmate-readme": "^1.0.5"
   },
   "devDependencies": {
     "ava": "^0.18.2",
