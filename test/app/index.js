@@ -1,3 +1,4 @@
+const path = require('path');
 const chai = require('chai');
 const spies = require('chai-spies');
 const expect = chai.expect;
@@ -11,7 +12,7 @@ let context;
 test.before(() => {
   context = TestUtils.mock('app');
   require('../../generators/app/index');
-  process.chdir('../../');
+  process.chdir(path.resolve(__dirname, '../../'));
 });
 
 test('Call this.bitmatePrompts', () => {
