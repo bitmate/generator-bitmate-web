@@ -39,6 +39,7 @@ module.exports = bitmate.Base.extend({
 
     this.composeWith(`bitmate-${this.props.runner}`, {
       options: {
+        server: this.props.server,
         client: this.props.client,
         modules: this.props.modules,
         css: this.props.css,
@@ -52,6 +53,7 @@ module.exports = bitmate.Base.extend({
 
     this.composeWith(`bitmate-readme`, {
       options: {
+        server: this.props.server,
         client: this.props.client,
         modules: this.props.modules,
         css: this.props.css,
