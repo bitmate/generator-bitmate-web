@@ -64,5 +64,16 @@ module.exports = bitmate.Base.extend({
     }, {
       local: require.resolve(`@oligibson/generator-bitmate-readme/generators/app`)
     });
+
+    this.composeWith(`bitmate-deploy`, {
+      options: {
+        server: this.props.server,
+        client: this.props.client,
+        skipInstall: this.props.skipInstall,
+        skipCache: this.props.skipCache
+      }
+    }, {
+      local: require.resolve(`@oligibson/generator-bitmate-deploy/generators/app`)
+    });
   }
 });

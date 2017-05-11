@@ -32,7 +32,7 @@ test('composing(): Call this.composeWith, should generate server, client, runner
     server: 'express',
     runner: 'gulp'
   });
-  expect(spy).to.have.been.called.exactly(4);
+  expect(spy).to.have.been.called.exactly(5);
 });
 
 test('composing(): should only generate server if no client framework', () => {
@@ -44,7 +44,7 @@ test('composing(): should only generate server if no client framework', () => {
     server: 'express',
     runner: 'gulp'
   });
-  expect(spy).to.have.been.called.exactly(3);
+  expect(spy).to.have.been.called.exactly(4);
 });
 
 test('composing(): should only generate client if no server framework', () => {
@@ -56,5 +56,5 @@ test('composing(): should only generate client if no server framework', () => {
     server: 'none',
     runner: 'gulp'
   });
-  expect(spy).to.have.been.called.exactly(3);
+  expect(spy).to.have.been.called.exactly(4);
 });

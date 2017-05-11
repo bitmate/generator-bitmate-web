@@ -14,7 +14,8 @@
     "@oligibson/generator-bitmate-react": "^1.0.5",
     "@oligibson/generator-bitmate-express": "^1.0.5",
     "@oligibson/generator-bitmate-gulp": "^1.0.5",
-    "@oligibson/generator-bitmate-readme": "^1.0.5"
+    "@oligibson/generator-bitmate-readme": "^1.0.5",
+    "@oligibson/generator-bitmate-deploy": "^1.0.0"
   },
   "devDependencies": {
     "ava": "^0.18.2",
